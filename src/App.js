@@ -14,7 +14,7 @@ const App = () => {
         <Content>
           <Switch>
             <Route exact path="/" component={LandingPage} />
-            <Route path="/repos" component={ImagePage} />
+            <Route path="/images" component={ImagePage} />
           </Switch>
         </Content>
       </>
