@@ -12,20 +12,25 @@ const ImagePage = () => {
   const [searchResults,setSearchResults] = useState([])
 
   const handleSubmit = async () => {
-    const data = await imageService.searchQuery(search);
-    setSearchResults(data)
-    console.log(data)
+    if (search === '') {
+      alert("Please enter a non-empty String");
+    } else {
+      const data = await imageService.searchQuery(search);
+      setSearchResults(data)
+      console.log(data)
+      console.log(getRowItems(data))
+    }
   }
 
   const LinkList = ({ url, homepageUrl }) => (
     <ul style={{ display: 'flex' }}>
       <li>
-        <Link href={url}>GitHub</Link>
+        <Link href={url}>Museum Page</Link>
       </li>
       {homepageUrl && (
         <li>
           <span>&nbsp;|&nbsp;</span>
-          <Link href={homepageUrl}>Homepage</Link>
+          <Link href={homepageUrl}>Image</Link>
         </li>
       )}
     </ul>
@@ -54,6 +59,7 @@ const ImagePage = () => {
     }
   ];
   
+  /*
   const rows = [
     {
       id: '1',
@@ -62,12 +68,13 @@ const ImagePage = () => {
       department: 'Asian Art',
       objectDate: 'late 17th century'
     },
-  ];
+  ]; */
   
   const getRowItems = (rows) =>
-    rows.map((row) => ({
+    rows.map((row,index) => ({
       ...row,
-      key: row.objectID,
+      id: String(row.objectID),
+      key: index,
       name: row.title,
       artistName: row.artistDisplayName,
       department: row.department,
