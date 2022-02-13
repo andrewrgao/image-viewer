@@ -84,14 +84,20 @@ const ImagePage = () => {
 
 
   return (
-    <div className="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
-      <Search
-        id="search-1"
-        placeHolderText="Search"
-        labelText="Text input"
-        onChange={(event) => setSearch(event.target.value)}
-      />
-      <Button onClick={handleSubmit}>Search</Button>
+    <div>
+      <div className="flex">
+        <div className="row-header">
+          <Search
+            id="search-1"
+            placeHolderText="Search"
+            labelText="Text input"
+            onChange={(event) => setSearch(event.target.value)}
+          />
+        </div>
+        <div>
+          <Button onClick={handleSubmit}>Search</Button>
+        </div>
+      </div>
       <ImageTable headers={headers} rows={getRowItems(searchResults)} />
     </div>
   );

@@ -11,3 +11,14 @@
 .label {
   font-weight: bold;
 }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.flex .row-header{
+  flex-grow: 1
+}
