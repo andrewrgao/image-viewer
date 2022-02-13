@@ -4,6 +4,13 @@
   object-fit: contain;
 }
 
+.image-table-icon {
+  max-width: 25%; 
+  max-width: 200px;
+  max-height: 25%; 
+  max-height: 350px;
+}
+
 .description {
   flex-direction: row;
 }

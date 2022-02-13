@@ -45,7 +45,15 @@ const ImagePage = () => {
     </ul>
   );
 
+  const Image = ({ url, alt }) => (
+    <img className="image-table-icon" src={url} alt={alt}/>
+  );
+
   const headers = [
+    {
+      key: 'image',
+      header:'Image'
+    },
     {
       key: 'name',
       header: 'Name',
@@ -78,6 +86,7 @@ const ImagePage = () => {
       department: row.department,
       objectDate: row.objectDate,
       links: <LinkList url={row.objectURL} homepageUrl={row.primaryImage} />,
+      image: <Image url={row.primaryImage} alt={row.objectName}/>
     }));
 
   return (
