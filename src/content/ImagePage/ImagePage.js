@@ -3,6 +3,7 @@ import {
   Search,
   Link,
   Button,
+  DataTableSkeleton
 } from 'carbon-components-react';
 import imageService from '../../services/imageService'
 import ImageTable from './ImageTable';
@@ -10,13 +11,16 @@ import ImageTable from './ImageTable';
 const ImagePage = () => {
   const [search,setSearch] = useState('')
   const [searchResults,setSearchResults] = useState([])
+  const [loading,setLoading] = useState(false)
 
   const handleSubmit = async () => {
     if (search === '') {
       alert("Please enter a non-empty String");
     } else {
+      setLoading(true)
       const data = await imageService.searchQuery(search);
       setSearchResults(data)
+      setLoading(false)
       console.log(data)
       console.log(getRowItems(data))
     }
@@ -82,7 +86,6 @@ const ImagePage = () => {
       links: <LinkList url={row.objectURL} homepageUrl={row.primaryImage} />,
     }));
 
-
   return (
     <div>
       <div className="flex">
@@ -98,7 +101,12 @@ const ImagePage = () => {
           <Button onClick={handleSubmit}>Search</Button>
         </div>
       </div>
-      <ImageTable headers={headers} rows={getRowItems(searchResults)} />
+      {!loading && <ImageTable headers={headers} rows={getRowItems(searchResults)} />}
+      {loading && <DataTableSkeleton
+      columnCount={headers.length + 1}
+      rowCount={10}
+      headers={headers}
+    />}
     </div>
   );
 };
