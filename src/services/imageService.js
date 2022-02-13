@@ -9,15 +9,9 @@ const getData = async (objectId) => {
 
 const searchQuery = async (query) => {
   const response = await axios.get(`${baseUrl}search?q=${query}`);
-  /*
-  const data = await Promise.all(
-    response.data.objectIDs.map((objectId) => {
-      const response2 = await getData(objectId);
-      await console.log('here',response2.data)
-      return await response2.data;
-    })
-  );
-  */
+  if (await response.data.total === 0) {
+    return [];
+  }
   let data = await axios.all(response.data.objectIDs.map((objectId) => axios.get(`${baseUrl}objects/${objectId}`)))
   data = await data.map((response) => response.data)
   return data;

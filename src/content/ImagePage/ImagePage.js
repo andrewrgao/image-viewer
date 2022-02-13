@@ -54,7 +54,7 @@ const ImagePage = () => {
       header: 'Date',
     },
     {
-      key: 'link',
+      key: 'links',
       header: 'Link',
     }
   ];
@@ -79,7 +79,7 @@ const ImagePage = () => {
       artistName: row.artistDisplayName,
       department: row.department,
       objectDate: row.objectDate,
-      links: <LinkList url={row.objectUrl} homepageUrl={row.primaryImage} />,
+      links: <LinkList url={row.objectURL} homepageUrl={row.primaryImage} />,
     }));
 
 

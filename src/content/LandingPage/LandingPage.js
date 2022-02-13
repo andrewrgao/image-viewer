@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  Breadcrumb,
-  BreadcrumbItem,
   Button,
   Tabs,
   Tab,

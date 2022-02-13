@@ -6,18 +6,11 @@ import {
   HeaderNavigation,
   HeaderMenuButton,
   HeaderMenuItem,
-  HeaderGlobalBar,
-  HeaderGlobalAction,
   SkipToContent,
   SideNav,
   SideNavItems,
   HeaderSideNavItems,
 } from 'carbon-components-react';
-import {
-  AppSwitcher20,
-  Notification20,
-  UserAvatar20,
-} from '@carbon/icons-react';
 import { Link } from 'react-router-dom';
 
 const ImageHeader = () => (
