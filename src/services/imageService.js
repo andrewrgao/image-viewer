@@ -2,11 +2,6 @@ import axios from 'axios';
 
 const baseUrl = `https://collectionapi.metmuseum.org/public/collection/v1/`
 
-const getData = async (objectId) => {
-  const request = await axios.get(`${baseUrl}objects/${objectId}`);
-  return request.data;
-};
-
 const searchQuery = async (query) => {
   const response = await axios.get(`${baseUrl}search?q=${query}`);
   if (await response.data.total === 0) {

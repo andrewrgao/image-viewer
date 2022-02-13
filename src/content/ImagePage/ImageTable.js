@@ -15,6 +15,7 @@ import {
 
 const ImageTable = ({ rows, headers }) => {
 
+  //functions to get the values from the prop
   const getImageUrl = (rowId) => {
     const row = rows.find(({ id }) => id === rowId);
     return row ? row.primaryImage : '';

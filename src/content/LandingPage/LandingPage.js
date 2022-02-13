@@ -17,6 +17,7 @@ const LandingPage = () => {
       tabIndex: 0,
     },
   };
+  
   return (
     <div className="bx--grid bx--grid--full-width landing-page">
       <div className="bx--row landing-page__banner">
