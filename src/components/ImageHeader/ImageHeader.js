@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 const ImageHeader = () => (
   <HeaderContainer
     render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-      <Header aria-label="Carbon Tutorial">
+      <Header aria-label="Image Viewer">
         <SkipToContent />
         <HeaderMenuButton
           aria-label="Open menu"
@@ -26,7 +26,7 @@ const ImageHeader = () => (
         <HeaderName element={Link} to="/" prefix="IBM">
           Image Viewer
         </HeaderName>
-        <HeaderNavigation aria-label="Carbon Tutorial">
+        <HeaderNavigation aria-label="Image Viewer">
           <HeaderMenuItem element={Link} to="/images">Image Search</HeaderMenuItem>
         </HeaderNavigation>
         <SideNav

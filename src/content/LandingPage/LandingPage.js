@@ -33,7 +33,12 @@ const LandingPage = () => {
                   <div className="bx--col-md-4 bx--col-lg-7">
                     <p className="landing-page__p">
                       This is an Image Viewer that can be used to browse the vast collection
-                      of art provided from the Metropolitan Museum API.
+                      of art owned by the Metropolitan Musuem. 
+                    </p>
+                    <p className="landing-page__p">
+                      The Met Collection features art from over 5000 years of history. The collection
+                      features art from the first cities of the ancient world to modern works being
+                      created today.
                     </p>
                   </div>
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
@@ -46,7 +51,7 @@ const LandingPage = () => {
                 </div>
               </div>
             </Tab>
-            <Tab {...props.tab} label="Musuem Info">
+            <Tab {...props.tab} label="Museum Info">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-16">
@@ -59,7 +64,9 @@ const LandingPage = () => {
                     The Cloisters at Fort Tryon Park in Upper Manhattan, contains an extensive collection of art, architecture, 
                     and artifacts from medieval Europe.
                    </p>
-                   <Button>Learn More</Button>
+                   <form className="learnmore-nav" action="https://www.metmuseum.org/">
+                    <Button type="submit">Learn More</Button>
+                   </form>
                   </div>
                 </div>
               </div>

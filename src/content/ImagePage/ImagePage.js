@@ -68,17 +68,6 @@ const ImagePage = () => {
     }
   ];
   
-  /*
-  const rows = [
-    {
-      id: '1',
-      name: 'Quail and Millet',
-      artistName: 'Kiyohara Yukinobu',
-      department: 'Asian Art',
-      objectDate: 'late 17th century'
-    },
-  ]; */
-  
   const getRowItems = (rows) =>
     rows.map((row,index) => ({
       ...row,
@@ -92,7 +81,7 @@ const ImagePage = () => {
     }));
 
   return (
-    <div>
+    <div id="searchbox">
       <div className="flex">
         <div className="row-header">
           <Search
@@ -106,9 +95,10 @@ const ImagePage = () => {
           <Button onClick={handleSubmit}>Search</Button>
         </div>
       </div>
-      {!loading && <ImageTable headers={headers} rows={searchResults.slice(firstRowIndex, firstRowIndex + currentPageSize)}/>
+      {!loading && <ImageTable id='imagetable' headers={headers} rows={searchResults.slice(firstRowIndex, firstRowIndex + currentPageSize)}/>
       }
       {loading && <DataTableSkeleton
+        id='imageloading'
         columnCount={headers.length + 1}
         rowCount={10}
         headers={headers}
