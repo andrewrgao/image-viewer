@@ -17,7 +17,7 @@ const LandingPage = () => {
       tabIndex: 0,
     },
   };
-  
+
   return (
     <div className="bx--grid bx--grid--full-width landing-page">
       <div className="bx--row landing-page__banner">
@@ -80,10 +80,10 @@ const LandingPage = () => {
           <h3 className="landing-page__label">More Info</h3>
         </div>
         <div className="bx--col-md-4 bx--col-lg-4">
-          <Link href='https://www.metmuseum.org/'>Metropolitan Musuem Website</Link>
+          <Link href='https://www.metmuseum.org/'>Metropolitan Museum Website</Link>
         </div>
         <div className="bx--col-md-4 bx--col-lg-4">
-          <Link href='https://metmuseum.github.io/'> Metropolitan Musuem API</Link>
+          <Link href='https://metmuseum.github.io/'> Metropolitan Museum API</Link>
         </div>
       </div>
     </div>
