@@ -26,6 +26,28 @@ The page will reload when you make changes.\
 
 Launches the cypress Dashboard to run the tests
 
+## Enchancements TODO:
 
+### Display Galleries
+
+Add another tab in the NavBar featuring precrafted galleries to enchance the users viewing experience
+
+### Advanced Search
+
+Allow users to more precisely search the art collection by implementing an
+advanced search allowing for more tags, sucj as allowing users to search
+artworks of certain time periods.
+
+### Landing Page featured artworks
+
+On the Landing Page have an Featured Image that rotates daily
+
+### Search Cache
+
+Implement an cache for faster searchs on more frequently requested queries
+
+### Image Table Sorting
+
+Allow Users to sort the Image Table, such as sorting by Alphabetical order by name.
 
 
