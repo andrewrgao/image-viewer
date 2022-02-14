@@ -26,8 +26,6 @@ const ImagePage = () => {
       setSearchResults(getRowItems(data))
       setTotalItems(data.length)
       setLoading(false)
-      console.log(data)
-      console.log(getRowItems(data))
     }
   }
 
