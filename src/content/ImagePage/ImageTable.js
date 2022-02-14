@@ -100,9 +100,9 @@ const ImageTable = ({ rows, headers }) => {
                     ))}
                   </TableExpandRow>
                   <TableExpandedRow colSpan={headers.length + 1}>
-                    <div class="bx--grid">
-                      <div class="bx--row description">
-                        <div class="bx--col-lg-10">
+                    <div className="bx--grid">
+                      <div className="bx--row description">
+                        <div className="bx--col-lg-10">
                           <p>
                             <span className="label">Title: </span>
                             <span>
@@ -152,7 +152,7 @@ const ImageTable = ({ rows, headers }) => {
                             </span>
                           </p>
                         </div>
-                        <div class="bx--col-lg-6">
+                        <div className="bx--col-lg-6">
                           <img className='image-table-img' src={getImageUrl(row.id)} alt={getImageName(row.id)}/>
                         </div>
                       </div>
