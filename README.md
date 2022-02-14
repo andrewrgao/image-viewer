@@ -3,6 +3,8 @@
 Image Viewer that allows users to search and browse the collection of art from
 the Metropolitan Museum.
 
+Builting using React and Carbon Design System
+
 ## Intial Setup
 
 Run initial installion of dependencies
